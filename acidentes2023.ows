@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(104.0, 258.0)" />
+		<node id="1" name="Correlations" qualified_name="Orange.widgets.data.owcorrelations.OWCorrelations" project_name="Orange3" version="" title="Correlations" position="(297.0, 156.0)" />
+		<node id="2" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(298.0, 270.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/acidentes2023.csv'}, {'encoding': 'iso8859-1', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 35, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/mestrado/data-science/src', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\xf4\x00\x00\x01\xae\x00\x00\x04\x0b\x00\x00\x03\x02\x00\x00\x02\xf5\x00\x00\x01\xcd\x00\x00\x04\n\x00\x00\x03\x01\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02\xf5\x00\x00\x01\xcd\x00\x00\x04\n\x00\x00\x03\x01', '__version__': 3}</properties>
+		<properties node_id="1" format="pickle">gASVpwEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBjb3JyZWxhdGlvbl90eXBllEsA
+jBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAMQAAABHQAABG8AAALMAAADEQAAATwA
+AARuAAACywAAAAAAAAAAB4AAAAMRAAABPAAABG4AAALLlIwLX192ZXJzaW9uX1+USwOMEGNvbnRl
+eHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiM
+BnZhbHVlc5R9lCiMB2ZlYXR1cmWUTkr+////hpSMCXNlbGVjdGlvbpRdlCiMAmlklEtmhpSMBXBl
+c2lklEtmhpRlSv3///+GlGgFSwN1jAphdHRyaWJ1dGVzlH2UKGgTSwJoFUsCjAxkYXRhX2ludmVy
+c2GUSwSMB2hvcmFyaW+USwSMAmJylEsCjAppZF92ZWljdWxvlEsCjBZhbm9fZmFicmljYWNhb192
+ZWljdWxvlEsCjAVpZGFkZZRLAnWMBW1ldGFzlH2UdWJhdS4=
+</properties>
+		<properties node_id="2" format="pickle">gASVxgMAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMEGN1bXVs
+YXRpdmVfZGlzdHKUiYwTZml0dGVkX2Rpc3RyaWJ1dGlvbpRLAIwJaGlkZV9iYXJzlImMDWtkZV9z
+bW9vdGhpbmeUSwqME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAfEAAADHAAAFjwAA
+AyIAAAHyAAAA5gAABY4AAAMhAAAAAAAAAAAHgAAAAfIAAADmAAAFjgAAAyGUjApzaG93X3Byb2Jz
+lImMDHNvcnRfYnlfZnJlcZSJjA9zdGFja2VkX2NvbHVtbnOUiYwLX192ZXJzaW9uX1+USwKMEGNv
+bnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9
+lCiMBnZhbHVlc5R9lCiMBGN2YXKUjApkaWFfc2VtYW5hlEtlhpSMDm51bWJlcl9vZl9iaW5zlEsA
+Sv7///+GlIwNc2VsZWN0ZWRfYmFyc5SPlEr+////hpSMA3ZhcpSMCnRpcG9fcGlzdGGUS2WGlGgM
+SwJ1jAphdHRyaWJ1dGVzlH2UKIwCaWSUSwKMBXBlc2lklEsCjAxkYXRhX2ludmVyc2GUSwRoF0sB
+jAdob3JhcmlvlEsEjAJ1ZpRLAYwCYnKUSwKMDmNhdXNhX2FjaWRlbnRllEsBjA10aXBvX2FjaWRl
+bnRllEsBjBZjbGFzc2lmaWNhY2FvX2FjaWRlbnRllEsBjAhmYXNlX2RpYZRLAYwLc2VudGlkb192
+aWGUSwGMFmNvbmRpY2FvX21ldGVyZW9sb2dpY2GUSwFoH0sBjAh1c29fc29sb5RLAYwKaWRfdmVp
+Y3Vsb5RLAowMdGlwb192ZWljdWxvlEsBjBZhbm9fZmFicmljYWNhb192ZWljdWxvlEsCjA50aXBv
+X2Vudm9sdmlkb5RLAYwNZXN0YWRvX2Zpc2ljb5RLAYwFaWRhZGWUSwKMBHNleG+USwGMBmlsZXNv
+c5RLAYwNZmVyaWRvc19sZXZlc5RLAYwOZmVyaWRvc19ncmF2ZXOUSwGMBm1vcnRvc5RLAYwIcmVn
+aW9uYWyUSwF1jAVtZXRhc5R9lCiMAmttlEsDjAltdW5pY2lwaW+USwOMC3RyYWNhZG9fdmlhlEsD
+jAVtYXJjYZRLA4wIbGF0aXR1ZGWUSwOMCWxvbmdpdHVkZZRLA4wJZGVsZWdhY2lhlEsDjAN1b3CU
+SwN1dWJhdS4=
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
