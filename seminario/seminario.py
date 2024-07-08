@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
 
 # Função para ler arquivos de feriados sem cabeçalho e adicionar os cabeçalhos
 def load_tables_with_headers(file_paths, delimiter, encoding, headers):
@@ -129,6 +130,27 @@ plt.title('Média de Acidentes por Dia')
 plt.xlabel('Feriado')
 plt.ylabel('Média de Acidentes')
 plt.xticks(ticks=[0, 1], labels=['Não Feriado', 'Feriado'])
+
+plt.tight_layout()
+plt.show()
+
+# Gráfico de barras dos últimos 365 dias
+plt.figure(figsize=(18, 6))
+
+# Filtrar os dados dos últimos 365 dias
+end_date = df_sp['data_inversa'].max()
+start_date = end_date - timedelta(days=365)
+last_year_data = df_sp[(df_sp['data_inversa'] >= start_date) & (df_sp['data_inversa'] <= end_date)]
+
+# Contar número de acidentes por dia
+daily_accidents_last_year = last_year_data.groupby(['data_inversa', 'feriado']).size().reset_index(name='num_acidentes')
+
+# Plotar o gráfico
+colors = ['red' if feriado == 'true' else 'blue' for feriado in daily_accidents_last_year['feriado']]
+plt.bar(daily_accidents_last_year['data_inversa'], daily_accidents_last_year['num_acidentes'], color=colors)
+plt.title('Número de Acidentes nos Últimos 365 Dias')
+plt.xlabel('Data')
+plt.ylabel('Número de Acidentes')
 
 plt.tight_layout()
 plt.show()
