@@ -2,11 +2,12 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Função para ler arquivos de feriados
-def load_tables(file_paths, delimiter, encoding):
+# Função para ler arquivos de feriados sem cabeçalho e adicionar os cabeçalhos
+def load_tables_with_headers(file_paths, delimiter, encoding, headers):
     tables = pd.DataFrame()
     for file_path in file_paths:
-        df = pd.read_csv(file_path, delimiter=delimiter, encoding=encoding)
+        df = pd.read_csv(file_path, delimiter=delimiter, encoding=encoding, header=None)
+        df.columns = headers
         tables = pd.concat([tables, df], ignore_index=True)
     return tables
 
@@ -20,19 +21,31 @@ holiday_files = [
     'src/feriados/nacional/csv/2024.csv'
 ]
 
+# Lista de arquivos de acidentes
 accident_files = [
     'src/datatran2023.csv',
     'src/datatran2024.csv'
 ]
 
-# Carregar os feriados
-holidays = load_tables(holiday_files, ",", "latin1")
+# Cabeçalhos para os arquivos de feriados
+holiday_headers = ['data', 'nome', 'tipo', 'descricao', 'uf', 'municipio']
+
+# Carregar os feriados com cabeçalhos
+holidays = load_tables_with_headers(holiday_files, ",", "latin1", holiday_headers)
 
 # Filtrar feriados para incluir apenas aqueles onde uf é SP ou nulo
 holidays = holidays[(holidays['uf'] == 'SP') | (holidays['uf'].isna())]
 
 # Converter colunas de data para datetime
 holidays['data'] = pd.to_datetime(holidays['data'], format='%d/%m/%Y')
+
+# Função para ler arquivos de acidentes
+def load_tables(file_paths, delimiter, encoding):
+    tables = pd.DataFrame()
+    for file_path in file_paths:
+        df = pd.read_csv(file_path, delimiter=delimiter, encoding=encoding)
+        tables = pd.concat([tables, df], ignore_index=True)
+    return tables
 
 # Carregar o arquivo CSV de acidentes
 df = load_tables(accident_files, ";", "latin1")
@@ -80,7 +93,7 @@ df_sp.to_csv(output_file_path, index=False, sep=';', encoding='latin1')
 
 # Configurações gerais para os gráficos
 plt.style.use('ggplot')
-plt.figure(figsize=(14, 8))
+plt.figure(figsize=(14, 10))
 
 # Distribuição dos acidentes por dia da semana
 plt.subplot(2, 2, 1)
@@ -103,6 +116,19 @@ df_sp_fatal['municipio'].value_counts().plot(kind='bar', color='red')
 plt.title('Número de Acidentes com Vítimas Fatais por Município')
 plt.xlabel('Município')
 plt.ylabel('Número de Acidentes Fatais')
+
+# Gráfico de barras para média de acidentes por dia
+plt.subplot(2, 2, 4)
+daily_accidents = df_sp.groupby(['data_inversa', 'feriado']).size().reset_index(name='num_acidentes')
+daily_avg = daily_accidents.groupby('feriado')['num_acidentes'].mean().reset_index()
+
+colors = ['red' if feriado == 'true' else 'blue' for feriado in daily_avg['feriado']]
+
+plt.bar(daily_avg['feriado'], daily_avg['num_acidentes'], color=colors)
+plt.title('Média de Acidentes por Dia')
+plt.xlabel('Feriado')
+plt.ylabel('Média de Acidentes')
+plt.xticks(ticks=[0, 1], labels=['Não Feriado', 'Feriado'])
 
 plt.tight_layout()
 plt.show()
