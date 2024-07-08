@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Estaduais 2023" position="(95.0, 924.0)" />
+		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Nacional 2023" position="(95.0, 1031.0)" />
+		<node id="2" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Acidentes 2023 (Agrupados por ocorrência)" position="(326.0, 508.0)" />
+		<node id="3" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(779.0, 780.0)" />
+		<node id="4" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Acidentes 2024 (Agrupados por ocorrência)" position="(326.0, 628.0)" />
+		<node id="5" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Estado SP" position="(651.0, 576.0)" />
+		<node id="6" name="Concatenate" qualified_name="Orange.widgets.data.owconcatenate.OWConcatenate" project_name="Orange3" version="" title="Concatenate" position="(504.0, 577.0)" />
+		<node id="7" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Municipais 2023 (1)" position="(101.0, 822.0)" />
+		<node id="8" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Estado SP" position="(249.0, 821.0)" />
+		<node id="9" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Estado SP (1)" position="(246.0, 921.0)" />
+		<node id="10" name="Concatenate" qualified_name="Orange.widgets.data.owconcatenate.OWConcatenate" project_name="Orange3" version="" title="Concatenate (1)" position="(637.0, 1077.0)" />
+		<node id="11" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(389.0, 920.0)" />
+		<node id="12" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (1)" position="(390.0, 821.0)" />
+		<node id="13" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (2)" position="(388.0, 1027.0)" />
+		<node id="14" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="Save Data" position="(856.0, 571.0)" />
+		<node id="15" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="Save Data (1)" position="(813.0, 911.0)" />
+		<node id="16" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Estaduais 2023 (1)" position="(97.0, 1273.0)" />
+		<node id="17" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Nacional 2023 (1)" position="(97.0, 1380.0)" />
+		<node id="18" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Feriados Municipais 2023 (1) (1)" position="(103.0, 1171.0)" />
+		<node id="19" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Estado SP (2)" position="(251.0, 1171.0)" />
+		<node id="20" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Estado SP (1) (1)" position="(248.0, 1270.0)" />
+		<node id="21" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (3)" position="(391.0, 1269.0)" />
+		<node id="22" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (1) (1)" position="(392.0, 1170.0)" />
+		<node id="23" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (2) (1)" position="(390.0, 1376.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="4" sink_node_id="6" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="1" source_node_id="2" sink_node_id="6" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="2" source_node_id="6" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="5" sink_node_id="3" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="4" source_node_id="7" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="5" source_node_id="0" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="6" source_node_id="9" sink_node_id="11" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="7" source_node_id="8" sink_node_id="12" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="8" source_node_id="12" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="9" source_node_id="11" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="10" source_node_id="1" sink_node_id="13" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="11" source_node_id="13" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="12" source_node_id="10" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="13" source_node_id="5" sink_node_id="14" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="14" source_node_id="10" sink_node_id="15" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="15" source_node_id="18" sink_node_id="19" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="16" source_node_id="16" sink_node_id="20" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="17" source_node_id="20" sink_node_id="21" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="18" source_node_id="19" sink_node_id="22" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="19" source_node_id="17" sink_node_id="23" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="20" source_node_id="23" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="21" source_node_id="21" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+		<link id="22" source_node_id="22" sink_node_id="10" source_channel="Data" sink_channel="Additional Data" enabled="true" source_channel_id="data" sink_channel_id="additional_data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 4, 'value': 'Auto'}, {'start': 4, 'stop': 5, 'value': 'Categorical'}, {'start': 5, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xeb\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xea\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xea', '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/nacional/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/nacional/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/nacional/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/nacional/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/nacional/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="2" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/datatran2023.csv'}, {'encoding': 'iso8859-1', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 30, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xeb\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xea\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xea', '__version__': 3}</properties>
+		<properties node_id="3" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x005\xff\xff\xff\xf8\x00\x00\n\x00\x00\x00\x048\x00\x00\x006\x00\x00\x00\x17\x00\x00\t\xff\x00\x00\x047\x00\x00\x00\x00\x02\x00\x00\x00\n\x00\x00\x00\x006\x00\x00\x00\x17\x00\x00\t\xff\x00\x00\x047', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import pandas as pd\nfrom Orange.data import Table, Domain, StringVariable, ContinuousVariable\n\n# Supõe que os dados foram passados como entrada via Orange\n# Você precisará carregar os dados dos inputs em `in_data`\n\n# Supondo que in_data[0] contém a tabela de feriados e in_data[1] contém a tabela de acidentes\nferiados_table = in_datas[1].table()\nacidentes_table = in_datas[0].table()\n\n# Converter Orange Table para pandas DataFrame\nferiados = pd.DataFrame(feriados_table, columns=[var.name for var in feriados_table.domain.variables])\nacidentes = pd.DataFrame(acidentes_table, columns=[var.name for var in acidentes_table.domain.variables])\n\nprint("Feriados:")\nprint(feriados.head())\n\nprint("Acidentes:")\nprint(acidentes.head())\n\n\n# Converter a coluna \'data\' para o tipo datetime\nferiados[\'data\'] = pd.to_datetime(feriados[\'data\'])\nacidentes[\'data_inversa\'] = pd.to_datetime(acidentes[\'data_inversa\'])\n\n# Adicionar coluna \'feriado\' na tabela de acidentes\nacidentes[\'feriado\'] = \'não\'\n\n# Filtrar feriados nacionais e estaduais (sem informação de município)\nprint("A")\nferiados_nacionais_estaduais = feriados[feriados[\'municipio\'].isnull()]\n\n# Verificar feriados nacionais e estaduais\nfor idx, row in acidentes.iterrows():\n    data_acidente = row[\'data_inversa\']\n    print("0")\n    municipio_acidente = row[\'municipio\']\n    print("0")\n    \n    # Verificar feriado nacional ou estadual\n    if data_acidente in feriados_nacionais_estaduais[\'data\'].values:\n        acidentes.at[idx, \'feriado\'] = \'sim\'\n    else:\n        # Verificar feriado municipal\n        print("1")\n        feriados_municipais = feriados[(feriados[\'municipio\'] == municipio_acidente) &amp; (feriados[\'data\'] == data_acidente)]\n        print("1")\n        if not feriados_municipais.empty:\n            acidentes.at[idx, \'feriado\'] = \'sim\'\n\n# Definir o domínio da tabela de acidentes\ndomain = Domain(\n    [ContinuousVariable.make(name) for name in acidentes.columns if acidentes[name].dtype != \'object\'],\n    [StringVariable.make(name) for name in acidentes.columns if acidentes[name].dtype == \'object\']\n)\n\n# Converter DataFrame pandas para Orange Table\naccidents_orange_table = Table.from_numpy(\n    domain,\n    acidentes.select_dtypes(include=[float, int]).to_numpy(),\n    metas=acidentes.select_dtypes(include=[object]).to_numpy()\n)\n\n# Passar a tabela de acidentes com a nova coluna para a saída\nout_data = accidents_orange_table\n\nprint("Processo concluído. A tabela de acidentes com a coluna de feriados foi processada.")\n', 'filename': None}], 'scriptText': 'import pandas as pd\nfrom Orange.data import Table, Domain, StringVariable, ContinuousVariable\n\n# Supõe que os dados foram passados como entrada via Orange\n# Você precisará carregar os dados dos inputs em `in_data`\n\n# Supondo que in_data[0] contém a tabela de feriados e in_data[1] contém a tabela de acidentes\nferiados_table = in_datas[1].table()\nacidentes_table = in_datas[0].table()\n\n# Converter Orange Table para pandas DataFrame\nferiados = pd.DataFrame(feriados_table, columns=[var.name for var in feriados_table.domain.variables])\nacidentes = pd.DataFrame(acidentes_table, columns=[var.name for var in acidentes_table.domain.variables])\n\nprint("Feriados:")\nprint(feriados.head())\n\nprint("Acidentes:")\nprint(acidentes.head())\n\n\n# Converter a coluna \'data\' para o tipo datetime\nferiados[\'data\'] = pd.to_datetime(feriados[\'data\'])\nacidentes[\'data_inversa\'] = pd.to_datetime(acidentes[\'data_inversa\'])\n\n# Adicionar coluna \'feriado\' na tabela de acidentes\nacidentes[\'feriado\'] = \'não\'\n\n# Filtrar feriados nacionais e estaduais (sem informação de município)\nprint("A")\nferiados_nacionais_estaduais = feriados[feriados[\'municipio\'].isnull()]\n\n# Verificar feriados nacionais e estaduais\nfor idx, row in acidentes.iterrows():\n    data_acidente = row[\'data_inversa\']\n    print("0")\n    municipio_acidente = row[\'municipio\']\n    print("0")\n    \n    # Verificar feriado nacional ou estadual\n    if data_acidente in feriados_nacionais_estaduais[\'data\'].values:\n        acidentes.at[idx, \'feriado\'] = \'sim\'\n    else:\n        # Verificar feriado municipal\n        print("1")\n        feriados_municipais = feriados[(feriados[\'municipio\'] == municipio_acidente) &amp; (feriados[\'data\'] == data_acidente)]\n        print("1")\n        if not feriados_municipais.empty:\n            acidentes.at[idx, \'feriado\'] = \'sim\'\n\n# Definir o domínio da tabela de acidentes\ndomain = Domain(\n    [ContinuousVariable.make(name) for name in acidentes.columns if acidentes[name].dtype != \'object\'],\n    [StringVariable.make(name) for name in acidentes.columns if acidentes[name].dtype == \'object\']\n)\n\n# Converter DataFrame pandas para Orange Table\naccidents_orange_table = Table.from_numpy(\n    domain,\n    acidentes.select_dtypes(include=[float, int]).to_numpy(),\n    metas=acidentes.select_dtypes(include=[object]).to_numpy()\n)\n\n# Passar a tabela de acidentes com a nova coluna para a saída\nout_data = accidents_orange_table\n\nprint("Processo concluído. A tabela de acidentes com a coluna de feriados foi processada.")\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xba\x00\x00\x00|\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="4" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/datatran2024.csv'}, {'encoding': 'iso8859-1', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 30, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/datatran2023.csv'}, {'encoding': 'iso8859-1', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 30, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="5" format="pickle">gASVLQYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAD7gAAATUAAAZHAAAC5AAAA+8AAAFUAAAGRgAAAuMAAAAAAAAAAAoAAAAD7wAAAVQA
+AAZGAAAC45SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnWMCmF0dHJpYnV0
+ZXOUfZQojAJpZJRLAowMZGF0YV9pbnZlcnNhlEsEjApkaWFfc2VtYW5hlEsBjAdob3JhcmlvlEsE
+aBRLAYwCYnKUSwKMDmNhdXNhX2FjaWRlbnRllEsBjA10aXBvX2FjaWRlbnRllEsBjBZjbGFzc2lm
+aWNhY2FvX2FjaWRlbnRllEsBjAhmYXNlX2RpYZRLAYwLc2VudGlkb192aWGUSwGMFmNvbmRpY2Fv
+X21ldGVyZW9sb2dpY2GUSwGMCnRpcG9fcGlzdGGUSwGMCHVzb19zb2xvlEsBjAdwZXNzb2FzlEsC
+jAZtb3J0b3OUSwKMDWZlcmlkb3NfbGV2ZXOUSwKMDmZlcmlkb3NfZ3JhdmVzlEsCjAZpbGVzb3OU
+SwKMCWlnbm9yYWRvc5RLAowHZmVyaWRvc5RLAowIdmVpY3Vsb3OUSwKMCHJlZ2lvbmFslEsBdYwF
+bWV0YXOUfZQojAJrbZRLA4wJbXVuaWNpcGlvlEsDjAt0cmFjYWRvX3ZpYZRLA4wIbGF0aXR1ZGWU
+SwOMCWxvbmdpdHVkZZRLA4wJZGVsZWdhY2lhlEsDjAN1b3CUSwN1dWJoDSmBlH2UKGgQfZQojApj
+b25kaXRpb25zlF2UKIwDWC40lEsBSwBdlIwCU1CUYXSUYWgISwJ1aBh9lCiMA1guMJRLBIwDWC4y
+lEsBaD5LAXVoMH2UKIwDWC4xlEsDjANYLjOUSwOMA1guNZRLA3V1YmgNKYGUfZQoaBB9lChoPF2U
+KGhESwFLAF2UjACUYXSUYWgISwJ1aBh9lChoQ0sEaERLAYwHWC40ICgxKZRLAYwHWC41ICgxKZRL
+AnVoMH2UKGhGSwNoR0sDjAdYLjUgKDIplEsDjAdYLjQgKDIplEsDdXViaA0pgZR9lChoEH2UKGg8
+XZQoaERLAUsAXZRoTmF0lGFoCEsCdWgYfZQoaENLBGhESwF1aDB9lChoRksDaEdLA3V1YmgNKYGU
+fZQoaBB9lChoPF2UKGhESwFLAF2UaE5hdJRhaAhLAnVoGH2UKGhDSwRoREsBjAdYLjQgKDEplEsB
+jAdYLjUgKDEplEsCjAdYLjQgKDIplEsCdWgwfZQoaEZLA2hHSwOMB1guNSAoMimUSwOMB1guNCAo
+MymUSwN1dWJoDSmBlH2UKGgQfZQoaDxdlChoREsBSwBdlGhOYXSUYWgISwJ1aBh9lCiMA1guMpRL
+AYwHWC40ICgxKZRLAYwHWC4wICgxKZRLBIwHWC41ICgxKZRLAowHWC40ICgyKZRLAnVoMH2UKIwH
+WC4wICgyKZRLA4wDWC4xlEsDjANYLjOUSwOMB1guNSAoMimUSwOMB1guNCAoMymUSwN1dWJoDSmB
+lH2UKGgQfZQoaDxdlChocksBSwBdlGhOYXSUYWgISwJ1aBh9lChocksBjAdYLjQgKDEplEsBjAdY
+LjAgKDEplEsEjAdYLjUgKDEplEsCdWgwfZQojAdYLjAgKDIplEsDaHlLA2h6SwOMB1guNSAoMimU
+SwOMB1guNCAoMimUSwN1dWJoDSmBlH2UKGgQfZQoaDxdlCiMA1guNJRLAUsAXZSMAlNQlGF0lGFo
+CEsCdWgYfZQoaHJLAWiPSwF1aDB9lCiMA1guMJRLA2h5SwNoeksDjANYLjWUSwN1dWJldS4=
+</properties>
+		<properties node_id="6" format="literal">{'append_source_column': False, 'auto_commit': True, 'controlAreaVisible': True, 'ignore_compute_value': False, 'ignore_names': False, 'merge_type': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04z\x00\x00\x019\x00\x00\x05\xbc\x00\x00\x02\xe0\x00\x00\x04{\x00\x00\x01X\x00\x00\x05\xbb\x00\x00\x02\xdf\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04{\x00\x00\x01X\x00\x00\x05\xbb\x00\x00\x02\xdf', 'source_attr_name': 'Source ID', 'source_column_role': 0, '__version__': 1}</properties>
+		<properties node_id="7" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 4, 'value': 'Auto'}, {'start': 4, 'stop': 5, 'value': 'Categorical'}, {'start': 5, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src/feriados/municipal/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="8" format="pickle">gASVrAYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAD7gAAATUAAAZHAAAC5AAAA+8AAAFUAAAGRgAAAuMAAAAAAAAAAAoAAAAD7wAAAVQA
+AAZGAAAC45SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnWMCmF0dHJpYnV0
+ZXOUfZQojARkYXRhlEsEjAR0aXBvlEsBaBRLAXWMBW1ldGFzlH2UKIwEbm9tZZRLA4wJZGVzY3Jp
+Y2FvlEsDjAltdW5pY2lwaW+USwN1dWJoDSmBlH2UKGgQfZQojApjb25kaXRpb25zlF2UKIwCdWaU
+SwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKIwCaWSUSwKMDGRhdGFfaW52ZXJzYZRLBIwKZGlhX3Nl
+bWFuYZRLAYwHaG9yYXJpb5RLBGgmSwGMAmJylEsCjA5jYXVzYV9hY2lkZW50ZZRLAYwNdGlwb19h
+Y2lkZW50ZZRLAYwWY2xhc3NpZmljYWNhb19hY2lkZW50ZZRLAYwIZmFzZV9kaWGUSwGMC3NlbnRp
+ZG9fdmlhlEsBjBZjb25kaWNhb19tZXRlcmVvbG9naWNhlEsBjAp0aXBvX3Bpc3RhlEsBjAh1c29f
+c29sb5RLAYwHcGVzc29hc5RLAowGbW9ydG9zlEsCjA1mZXJpZG9zX2xldmVzlEsCjA5mZXJpZG9z
+X2dyYXZlc5RLAowGaWxlc29zlEsCjAlpZ25vcmFkb3OUSwKMB2Zlcmlkb3OUSwKMCHZlaWN1bG9z
+lEsCjAhyZWdpb25hbJRLAXVoHH2UKIwCa22USwOMCW11bmljaXBpb5RLA4wLdHJhY2Fkb192aWGU
+SwOMCGxhdGl0dWRllEsDjAlsb25naXR1ZGWUSwOMCWRlbGVnYWNpYZRLA4wDdW9wlEsDdXViaA0p
+gZR9lChoEH2UKIwKY29uZGl0aW9uc5RdlCiMA1guNJRLAUsAXZSMAlNQlGF0lGFoCEsCdWgYfZQo
+jANYLjCUSwSMA1guMpRLAWhOSwF1aBx9lCiMA1guMZRLA4wDWC4zlEsDjANYLjWUSwN1dWJoDSmB
+lH2UKGgQfZQoaExdlChoVEsBSwBdlIwAlGF0lGFoCEsCdWgYfZQoaFNLBGhUSwGMB1guNCAoMSmU
+SwGMB1guNSAoMSmUSwJ1aBx9lChoVksDaFdLA4wHWC41ICgyKZRLA4wHWC40ICgyKZRLA3V1YmgN
+KYGUfZQoaBB9lChoTF2UKGhUSwFLAF2UaF5hdJRhaAhLAnVoGH2UKGhTSwRoVEsBdWgcfZQoaFZL
+A2hXSwN1dWJoDSmBlH2UKGgQfZQoaExdlChoVEsBSwBdlGheYXSUYWgISwJ1aBh9lChoU0sEaFRL
+AYwHWC40ICgxKZRLAYwHWC41ICgxKZRLAowHWC40ICgyKZRLAnVoHH2UKGhWSwNoV0sDjAdYLjUg
+KDIplEsDjAdYLjQgKDMplEsDdXViaA0pgZR9lChoEH2UKGhMXZQoaFRLAUsAXZRoXmF0lGFoCEsC
+dWgYfZQojANYLjKUSwGMB1guNCAoMSmUSwGMB1guMCAoMSmUSwSMB1guNSAoMSmUSwKMB1guNCAo
+MimUSwJ1aBx9lCiMB1guMCAoMimUSwOMA1guMZRLA4wDWC4zlEsDjAdYLjUgKDIplEsDjAdYLjQg
+KDMplEsDdXViaA0pgZR9lChoEH2UKGhMXZQoaIJLAUsAXZRoXmF0lGFoCEsCdWgYfZQoaIJLAYwH
+WC40ICgxKZRLAYwHWC4wICgxKZRLBIwHWC41ICgxKZRLAnVoHH2UKIwHWC4wICgyKZRLA2iJSwNo
+iksDjAdYLjUgKDIplEsDjAdYLjQgKDIplEsDdXViaA0pgZR9lChoEH2UKGhMXZQojANYLjSUSwFL
+AF2UjAJTUJRhdJRhaAhLAnVoGH2UKGiCSwFon0sBdWgcfZQojANYLjCUSwNoiUsDaIpLA4wDWC41
+lEsDdXViZXUu
+</properties>
+		<properties node_id="9" format="pickle">gASVFggAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAD7gAAATUAAAZHAAAC5AAAA+8AAAFUAAAGRgAAAuMAAAAAAAAAAAoAAAAD7wAAAVQA
+AAZGAAAC45SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnWMCmF0dHJpYnV0
+ZXOUfZQojARkYXRhlEsEjAR0aXBvlEsBjAJ1ZpRLAYwJbXVuaWNpcGlvlEsCdYwFbWV0YXOUfZQo
+jARub21llEsDjAlkZXNjcmljYW+USwN1dWJoDSmBlH2UKGgQfZQojApjb25kaXRpb25zlF2UKIwC
+dWaUSwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKIwEZGF0YZRLBIwEdGlwb5RLAWgnSwF1aB59lCiM
+BG5vbWWUSwOMCWRlc2NyaWNhb5RLA4wJbXVuaWNpcGlvlEsDdXViaA0pgZR9lChoEH2UKGgSXZQo
+jAJ1ZpRLA0sAjAJTUJSFlHSUYWgISwJ1aBh9lCiMBGRhdGGUSwSMBHRpcG+USwGMCW11bmljaXBp
+b5RLAnVoHn2UKIwEbm9tZZRLA4wJZGVzY3JpY2FvlEsDjAJ1ZpRLA3V1YmgNKYGUfZQoaBB9lCho
+El2UKIwEbm9tZZRLAUsAXZSMAJRhdJRhaAhLAnVoGH2UKIwEbm9tZZRLAYwCdWaUSwJ1aB59lCiM
+BWluZGV4lEsDjARkYXRhlEsDjAR0aXBvlEsDjAlkZXNjcmljYW+USwN1dWJoDSmBlH2UKGgQfZQo
+jApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKIwCaWSUSwKMDGRh
+dGFfaW52ZXJzYZRLBIwKZGlhX3NlbWFuYZRLAYwHaG9yYXJpb5RLBGhXSwGMAmJylEsCjA5jYXVz
+YV9hY2lkZW50ZZRLAYwNdGlwb19hY2lkZW50ZZRLAYwWY2xhc3NpZmljYWNhb19hY2lkZW50ZZRL
+AYwIZmFzZV9kaWGUSwGMC3NlbnRpZG9fdmlhlEsBjBZjb25kaWNhb19tZXRlcmVvbG9naWNhlEsB
+jAp0aXBvX3Bpc3RhlEsBjAh1c29fc29sb5RLAYwHcGVzc29hc5RLAowGbW9ydG9zlEsCjA1mZXJp
+ZG9zX2xldmVzlEsCjA5mZXJpZG9zX2dyYXZlc5RLAowGaWxlc29zlEsCjAlpZ25vcmFkb3OUSwKM
+B2Zlcmlkb3OUSwKMCHZlaWN1bG9zlEsCjAhyZWdpb25hbJRLAXVoHn2UKIwCa22USwOMCW11bmlj
+aXBpb5RLA4wLdHJhY2Fkb192aWGUSwOMCGxhdGl0dWRllEsDjAlsb25naXR1ZGWUSwOMCWRlbGVn
+YWNpYZRLA4wDdW9wlEsDdXViaA0pgZR9lChoEH2UKIwKY29uZGl0aW9uc5RdlCiMA1guNJRLAUsA
+XZSMAlNQlGF0lGFoCEsCdWgYfZQojANYLjCUSwSMA1guMpRLAWh/SwF1aB59lCiMA1guMZRLA4wD
+WC4zlEsDjANYLjWUSwN1dWJoDSmBlH2UKGgQfZQoaH1dlChohUsBSwBdlGhIYXSUYWgISwJ1aBh9
+lChohEsEaIVLAYwHWC40ICgxKZRLAYwHWC41ICgxKZRLAnVoHn2UKGiHSwNoiEsDjAdYLjUgKDIp
+lEsDjAdYLjQgKDIplEsDdXViaA0pgZR9lChoEH2UKGh9XZQoaIVLAUsAXZRoSGF0lGFoCEsCdWgY
+fZQoaIRLBGiFSwF1aB59lChoh0sDaIhLA3V1YmgNKYGUfZQoaBB9lChofV2UKGiFSwFLAF2UaEhh
+dJRhaAhLAnVoGH2UKGiESwRohUsBjAdYLjQgKDEplEsBjAdYLjUgKDEplEsCjAdYLjQgKDIplEsC
+dWgefZQoaIdLA2iISwOMB1guNSAoMimUSwOMB1guNCAoMymUSwN1dWJoDSmBlH2UKGgQfZQoaH1d
+lChohUsBSwBdlGhIYXSUYWgISwJ1aBh9lCiMA1guMpRLAYwHWC40ICgxKZRLAYwHWC4wICgxKZRL
+BIwHWC41ICgxKZRLAowHWC40ICgyKZRLAnVoHn2UKIwHWC4wICgyKZRLA4wDWC4xlEsDjANYLjOU
+SwOMB1guNSAoMimUSwOMB1guNCAoMymUSwN1dWJoDSmBlH2UKGgQfZQoaH1dlChosksBSwBdlGhI
+YXSUYWgISwJ1aBh9lChosksBjAdYLjQgKDEplEsBjAdYLjAgKDEplEsEjAdYLjUgKDEplEsCdWge
+fZQojAdYLjAgKDIplEsDaLlLA2i6SwOMB1guNSAoMimUSwOMB1guNCAoMimUSwN1dWJoDSmBlH2U
+KGgQfZQoaH1dlCiMA1guNJRLAUsAXZSMAlNQlGF0lGFoCEsCdWgYfZQoaLJLAWjPSwF1aB59lCiM
+A1guMJRLA2i5SwNouksDjANYLjWUSwN1dWJldS4=
+</properties>
+		<properties node_id="10" format="literal">{'append_source_column': False, 'auto_commit': True, 'controlAreaVisible': True, 'ignore_compute_value': False, 'ignore_names': False, 'merge_type': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04z\x00\x00\x019\x00\x00\x05\xbc\x00\x00\x02\xe0\x00\x00\x04{\x00\x00\x01X\x00\x00\x05\xbb\x00\x00\x02\xdf\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04{\x00\x00\x01X\x00\x00\x05\xbb\x00\x00\x02\xdf', 'source_attr_name': 'Source ID', 'source_column_role': 0, '__version__': 1}</properties>
+		<properties node_id="11" format="pickle">gASVpAIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAJ1ZpRLAYaUaBVLAoaUjAltdW5pY2lwaW+USwKGlGgVSwOGlIwEZGF0YZRLBIaU
+jAlhdHRyaWJ1dGWUSwCGlIwEdGlwb5RLAYaUaCJLAYaUdUr+////hpRoB0sBdYwKYXR0cmlidXRl
+c5R9lChoIEsEaCRLAWgaSwFoHUsCdYwFbWV0YXOUfZQoaBNLA2gXSwN1dWJoDCmBlH2UKGgPfZQo
+aBF9lCiMBHRpcG+USwGGlGgVSwCGlIwEbm9tZZRLA4aUaBVLAYaUjAlkZXNjcmljYW+USwOGlGgV
+SwKGlIwCdWaUSwGGlGgVSwOGlIwEZGF0YZRLBIaUaCJLAIaUjAltdW5pY2lwaW+USwOGlIwEbWV0
+YZRLAIaUdUr+////hpRoB0sBdWgofZQoaDxLBGgwSwFoOUsBdWgqfZQoaDNLA2g2SwNoP0sDdXVi
+ZXUu
+</properties>
+		<properties node_id="12" format="pickle">gASV8AIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAJ1ZpRLAYaUaBVLAoaUjARkYXRhlEsEhpSMCWF0dHJpYnV0ZZRLAIaUjAR0aXBv
+lEsBhpRoH0sBhpSMCW11bmljaXBpb5RLA4aUjARtZXRhlEsAhpR1Sv7///+GlGgHSwF1jAphdHRy
+aWJ1dGVzlH2UKIwEZGF0YZRLBIwEdGlwb5RLAYwCdWaUSwF1jAVtZXRhc5R9lCiMBG5vbWWUSwOM
+CWRlc2NyaWNhb5RLA4wJbXVuaWNpcGlvlEsDdXViaAwpgZR9lChoD32UKIwRZG9tYWluX3JvbGVf
+aGludHOUfZQojAR0aXBvlEsBhpSMCWF2YWlsYWJsZZRLAIaUjARub21llEsDhpRoOksBhpSMCWRl
+c2NyaWNhb5RLA4aUaDpLAoaUjAJ1ZpRLAYaUaDpLA4aUjARkYXRhlEsEhpSMCWF0dHJpYnV0ZZRL
+AIaUjAltdW5pY2lwaW+USwKGlGhHSwGGlHVK/v///4aUaAdLAXVoKX2UKGhFSwRoOEsBaEJLAWhJ
+SwJ1aC59lChoPEsDaD9LA3V1YmV1Lg==
+</properties>
+		<properties node_id="13" format="pickle">gASVfQMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAltdW5pY2lwaW+USwKGlGgVSwKGlIwCdWaUSwKGlGgVSwOGlIwEZGF0YZRLBIaU
+jAlhdHRyaWJ1dGWUSwCGlIwEdGlwb5RLAYaUaCJLAYaUdUr+////hpRoB0sBdYwKYXR0cmlidXRl
+c5R9lChoIEsEaCRLAWgdSwJoGksCdYwFbWV0YXOUfZQoaBNLA2gXSwN1dWJoDCmBlH2UKGgPfZQo
+jBFkb21haW5fcm9sZV9oaW50c5R9lCiMBHRpcG+USwGGlIwJYXZhaWxhYmxllEsAhpSMBG5vbWWU
+SwOGlGgzSwGGlIwJZGVzY3JpY2FvlEsDhpRoM0sChpSMAnVmlEsBhpRoM0sDhpSMCW11bmljaXBp
+b5RLAoaUaDNLBIaUjARkYXRhlEsEhpSMCWF0dHJpYnV0ZZRLAIaUdUr+////hpRoB0sBdWgofZQo
+aEFLBGgxSwFoO0sBaD5LAnVoKn2UKGg1SwNoOEsDdXViaAwpgZR9lChoD32UKGgvfZQojAR0aXBv
+lEsBhpRoM0sAhpSMBG5vbWWUSwOGlGgzSwGGlIwJZGVzY3JpY2FvlEsDhpRoM0sChpSMAnVmlEsB
+hpRoM0sDhpSMBGRhdGGUSwSGlGhDSwCGlIwJbXVuaWNpcGlvlEsDhpSMBG1ldGGUSwCGlHVK/v//
+/4aUaAdLAXVoKH2UKGhYSwRoTEsBaFVLAXVoKn2UKGhPSwNoUksDaFtLA3V1YmV1Lg==
+</properties>
+		<properties node_id="14" format="literal">{'add_type_annotations': False, 'auto_save': False, 'controlAreaVisible': True, 'filter': 'Comma-separated values (*.csv)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xaf\x00\x00\x01\xbe\x00\x00\x05\x8b\x00\x00\x02[\x00\x00\x04\xb0\x00\x00\x01\xdd\x00\x00\x05\x8a\x00\x00\x02Z\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04\xb0\x00\x00\x01\xdd\x00\x00\x05\x8a\x00\x00\x02Z', 'stored_name': 'acidente.csv', 'stored_path': 'I:/mestrado/data-science', '__version__': 3}</properties>
+		<properties node_id="15" format="literal">{'add_type_annotations': False, 'auto_save': False, 'controlAreaVisible': True, 'filter': 'Comma-separated values (*.csv)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xaf\x00\x00\x01\xbe\x00\x00\x05\x89\x00\x00\x02[\x00\x00\x04\xb0\x00\x00\x01\xdd\x00\x00\x05\x88\x00\x00\x02Z\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04\xb0\x00\x00\x01\xdd\x00\x00\x05\x88\x00\x00\x02Z', 'stored_name': 'feriados.csv', 'stored_path': 'I:/mestrado/data-science', '__version__': 3}</properties>
+		<properties node_id="16" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/estadual/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 4, 'value': 'Auto'}, {'start': 4, 'stop': 5, 'value': 'Categorical'}, {'start': 5, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src/feriados/estadual/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="17" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/nacional/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/nacional/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/nacional/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/nacional/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/estadual/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src/feriados/nacional/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="18" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/municipal/csv/2024.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'src/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Time'}, {'start': 1, 'stop': 4, 'value': 'Auto'}, {'start': 4, 'stop': 5, 'value': 'Categorical'}, {'start': 5, 'stop': 6, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/alexa/Downloads/feriados-brasil-master/dados/feriados/municipal/csv/2023.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 6, 'value': 'Auto'}], 'rowspec': [], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/mestrado/data-science/src/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/home/ricardo/Documentos/OneDriver/UFSC/2023.1/PPGSE/Ciência de Dados/Dados/Passenger+Crew.txt'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 15, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'I:/mestrado/data-science/seminario/src/feriados/municipal/csv', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04Z\x00\x00\x01\x82\x00\x00\x05q\x00\x00\x02\xd6\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04[\x00\x00\x01\xa1\x00\x00\x05p\x00\x00\x02\xd5', '__version__': 3}</properties>
+		<properties node_id="19" format="pickle">gASVrAYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAD7gAAATUAAAZHAAAC5AAAA+8AAAFUAAAGRgAAAuMAAAAAAAAAAAoAAAAD7wAAAVQA
+AAZGAAAC45SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnWMCmF0dHJpYnV0
+ZXOUfZQojARkYXRhlEsEjAR0aXBvlEsBaBRLAXWMBW1ldGFzlH2UKIwEbm9tZZRLA4wJZGVzY3Jp
+Y2FvlEsDjAltdW5pY2lwaW+USwN1dWJoDSmBlH2UKGgQfZQojApjb25kaXRpb25zlF2UKIwCdWaU
+SwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKIwCaWSUSwKMDGRhdGFfaW52ZXJzYZRLBIwKZGlhX3Nl
+bWFuYZRLAYwHaG9yYXJpb5RLBGgmSwGMAmJylEsCjA5jYXVzYV9hY2lkZW50ZZRLAYwNdGlwb19h
+Y2lkZW50ZZRLAYwWY2xhc3NpZmljYWNhb19hY2lkZW50ZZRLAYwIZmFzZV9kaWGUSwGMC3NlbnRp
+ZG9fdmlhlEsBjBZjb25kaWNhb19tZXRlcmVvbG9naWNhlEsBjAp0aXBvX3Bpc3RhlEsBjAh1c29f
+c29sb5RLAYwHcGVzc29hc5RLAowGbW9ydG9zlEsCjA1mZXJpZG9zX2xldmVzlEsCjA5mZXJpZG9z
+X2dyYXZlc5RLAowGaWxlc29zlEsCjAlpZ25vcmFkb3OUSwKMB2Zlcmlkb3OUSwKMCHZlaWN1bG9z
+lEsCjAhyZWdpb25hbJRLAXVoHH2UKIwCa22USwOMCW11bmljaXBpb5RLA4wLdHJhY2Fkb192aWGU
+SwOMCGxhdGl0dWRllEsDjAlsb25naXR1ZGWUSwOMCWRlbGVnYWNpYZRLA4wDdW9wlEsDdXViaA0p
+gZR9lChoEH2UKIwKY29uZGl0aW9uc5RdlCiMA1guNJRLAUsAXZSMAlNQlGF0lGFoCEsCdWgYfZQo
+jANYLjCUSwSMA1guMpRLAWhOSwF1aBx9lCiMA1guMZRLA4wDWC4zlEsDjANYLjWUSwN1dWJoDSmB
+lH2UKGgQfZQoaExdlChoVEsBSwBdlIwAlGF0lGFoCEsCdWgYfZQoaFNLBGhUSwGMB1guNCAoMSmU
+SwGMB1guNSAoMSmUSwJ1aBx9lChoVksDaFdLA4wHWC41ICgyKZRLA4wHWC40ICgyKZRLA3V1YmgN
+KYGUfZQoaBB9lChoTF2UKGhUSwFLAF2UaF5hdJRhaAhLAnVoGH2UKGhTSwRoVEsBdWgcfZQoaFZL
+A2hXSwN1dWJoDSmBlH2UKGgQfZQoaExdlChoVEsBSwBdlGheYXSUYWgISwJ1aBh9lChoU0sEaFRL
+AYwHWC40ICgxKZRLAYwHWC41ICgxKZRLAowHWC40ICgyKZRLAnVoHH2UKGhWSwNoV0sDjAdYLjUg
+KDIplEsDjAdYLjQgKDMplEsDdXViaA0pgZR9lChoEH2UKGhMXZQoaFRLAUsAXZRoXmF0lGFoCEsC
+dWgYfZQojANYLjKUSwGMB1guNCAoMSmUSwGMB1guMCAoMSmUSwSMB1guNSAoMSmUSwKMB1guNCAo
+MimUSwJ1aBx9lCiMB1guMCAoMimUSwOMA1guMZRLA4wDWC4zlEsDjAdYLjUgKDIplEsDjAdYLjQg
+KDMplEsDdXViaA0pgZR9lChoEH2UKGhMXZQoaIJLAUsAXZRoXmF0lGFoCEsCdWgYfZQoaIJLAYwH
+WC40ICgxKZRLAYwHWC4wICgxKZRLBIwHWC41ICgxKZRLAnVoHH2UKIwHWC4wICgyKZRLA2iJSwNo
+iksDjAdYLjUgKDIplEsDjAdYLjQgKDIplEsDdXViaA0pgZR9lChoEH2UKGhMXZQojANYLjSUSwFL
+AF2UjAJTUJRhdJRhaAhLAnVoGH2UKGiCSwFon0sBdWgcfZQojANYLjCUSwNoiUsDaIpLA4wDWC41
+lEsDdXViZXUu
+</properties>
+		<properties node_id="20" format="pickle">gASVhAgAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAD7gAAATUAAAZHAAAC5AAAA+8AAAFUAAAGRgAAAuMAAAAAAAAAAAoAAAAD7wAAAVQA
+AAZGAAAC45SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwNLAIwCU1CUhZR0lGFoCEsCdYwKYXR0cmlidXRl
+c5R9lCiMBGRhdGGUSwSMBHRpcG+USwGMCW11bmljaXBpb5RLAnWMBW1ldGFzlH2UKIwEbm9tZZRL
+A4wJZGVzY3JpY2FvlEsDjAJ1ZpRLA3V1YmgNKYGUfZQoaBB9lChoEl2UKIwDWC4ylEsBSwBdlIwA
+lGF0lGFoCEsCdWgYfZQoaCZLAYwDWC41lEsBdWgdfZQojANYLjCUSwOMA1guMZRLA4wDWC4zlEsD
+jANYLjSUSwN1dWJoDSmBlH2UKGgQfZQojApjb25kaXRpb25zlF2UKIwDWC4ylEsBSwBdlGgoYXSU
+YWgISwJ1aBh9lCiMA1guMJRLBGg2SwGMB1guNCAoMSmUSwGMB1guNSAoMSmUSwJ1aB19lCiMA1gu
+MZRLA4wDWC4zlEsDjAdYLjUgKDIplEsDjAdYLjQgKDIplEsDdXViaA0pgZR9lChoEH2UKGgSXZQo
+jAJ1ZpRLAUsAXZSMAlNQlGF0lGFoCEsCdWgYfZQojARkYXRhlEsEjAR0aXBvlEsBjAJ1ZpRLAYwJ
+bXVuaWNpcGlvlEsCdWgdfZQojARub21llEsDjAlkZXNjcmljYW+USwN1dWJoDSmBlH2UKGgQfZQo
+jApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKIwEZGF0YZRLBIwE
+dGlwb5RLAWhXSwF1aB19lCiMBG5vbWWUSwOMCWRlc2NyaWNhb5RLA4wJbXVuaWNpcGlvlEsDdXVi
+aA0pgZR9lChoEH2UKIwKY29uZGl0aW9uc5RdlCiMBG5vbWWUSwFLAF2UaChhdJRhaAhLAnVoGH2U
+KIwEbm9tZZRLAYwCdWaUSwJ1aB19lCiMBWluZGV4lEsDjARkYXRhlEsDjAR0aXBvlEsDjAlkZXNj
+cmljYW+USwN1dWJoDSmBlH2UKGgQfZQojApjb25kaXRpb25zlF2UKIwCdWaUSwFLAF2UjAJTUJRh
+dJRhaAhLAnVoGH2UKIwCaWSUSwKMDGRhdGFfaW52ZXJzYZRLBIwKZGlhX3NlbWFuYZRLAYwHaG9y
+YXJpb5RLBGh3SwGMAmJylEsCjA5jYXVzYV9hY2lkZW50ZZRLAYwNdGlwb19hY2lkZW50ZZRLAYwW
+Y2xhc3NpZmljYWNhb19hY2lkZW50ZZRLAYwIZmFzZV9kaWGUSwGMC3NlbnRpZG9fdmlhlEsBjBZj
+b25kaWNhb19tZXRlcmVvbG9naWNhlEsBjAp0aXBvX3Bpc3RhlEsBjAh1c29fc29sb5RLAYwHcGVz
+c29hc5RLAowGbW9ydG9zlEsCjA1mZXJpZG9zX2xldmVzlEsCjA5mZXJpZG9zX2dyYXZlc5RLAowG
+aWxlc29zlEsCjAlpZ25vcmFkb3OUSwKMB2Zlcmlkb3OUSwKMCHZlaWN1bG9zlEsCjAhyZWdpb25h
+bJRLAXVoHX2UKIwCa22USwOMCW11bmljaXBpb5RLA4wLdHJhY2Fkb192aWGUSwOMCGxhdGl0dWRl
+lEsDjAlsb25naXR1ZGWUSwOMCWRlbGVnYWNpYZRLA4wDdW9wlEsDdXViaA0pgZR9lChoEH2UKGg0
+XZQojANYLjSUSwFLAF2UjAJTUJRhdJRhaAhLAnVoGH2UKGg6SwRoNksBaJ5LAXVoHX2UKGg+SwNo
+P0sDjANYLjWUSwN1dWJoDSmBlH2UKGgQfZQoaDRdlChoNksBSwBdlGgoYXSUYWgISwJ1aBh9lCho
+OksEaDZLAXVoHX2UKGg+SwNoP0sDdXViaA0pgZR9lChoEH2UKGg0XZQoaDZLAUsAXZRoKGF0lGFo
+CEsCdWgYfZQoaDpLBGg2SwGMB1guNCAoMSmUSwGMB1guNSAoMSmUSwKMB1guNCAoMimUSwJ1aB19
+lChoPksDaD9LA4wHWC41ICgyKZRLA4wHWC40ICgzKZRLA3V1YmgNKYGUfZQoaBB9lChoNF2UKGg2
+SwFLAF2UaChhdJRhaAhLAnVoGH2UKIwDWC4ylEsBjAdYLjQgKDEplEsBjAdYLjAgKDEplEsEjAdY
+LjUgKDEplEsCjAdYLjQgKDIplEsCdWgdfZQojAdYLjAgKDIplEsDjANYLjGUSwOMA1guM5RLA4wH
+WC41ICgyKZRLA4wHWC40ICgzKZRLA3V1YmgNKYGUfZQoaBB9lChoNF2UKGjBSwFLAF2UaChhdJRh
+aAhLAnVoGH2UKGjBSwGMB1guNCAoMSmUSwGMB1guMCAoMSmUSwSMB1guNSAoMSmUSwJ1aB19lCiM
+B1guMCAoMimUSwNoyEsDaMlLA4wHWC41ICgyKZRLA4wHWC40ICgyKZRLA3V1YmgNKYGUfZQoaBB9
+lChoNF2UKIwDWC40lEsBSwBdlIwCU1CUYXSUYWgISwJ1aBh9lChowUsBaN5LAXVoHX2UKIwDWC4w
+lEsDaMhLA2jJSwOMA1guNZRLA3V1YmV1Lg==
+</properties>
+		<properties node_id="21" format="pickle">gASVTQQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAltdW5pY2lwaW+USwKGlGgVSwKGlIwCdWaUSwOGlGgVSwOGlIwEZGF0YZRLBIaU
+jAlhdHRyaWJ1dGWUSwCGlIwEdGlwb5RLAYaUaCJLAYaUdUr+////hpRoB0sBdYwKYXR0cmlidXRl
+c5R9lChoIEsEaCRLAWgaSwJ1jAVtZXRhc5R9lChoE0sDaBdLA2gdSwN1dWJoDCmBlH2UKGgPfZQo
+aBF9lCiMBG5vbWWUSwOGlGgVSwCGlIwJZGVzY3JpY2FvlEsDhpRoFUsBhpSMAnVmlEsBhpRoFUsC
+hpSMCW11bmljaXBpb5RLAoaUaBVLA4aUjARkYXRhlEsEhpRoIksAhpSMBHRpcG+USwGGlGgiSwGG
+lHVK/v///4aUaAdLAXVoKH2UKIwEZGF0YZRLBIwEdGlwb5RLAYwCdWaUSwGMCW11bmljaXBpb5RL
+AnVoKn2UKIwEbm9tZZRLA4wJZGVzY3JpY2FvlEsDdXViaAwpgZR9lChoD32UKGgRfZQojANYLjKU
+SwGGlGgiSwCGlIwDWC41lEsBhpRoIksBhpSMA1guMJRLA4aUjARtZXRhlEsAhpSMA1guMZRLA4aU
+aFdLAYaUjANYLjOUSwOGlGhXSwKGlIwDWC40lEsDhpRoV0sDhpR1Sv7///+GlGgHSwF1aCh9lCho
+T0sBaFJLAXVoKn2UKGhVSwNoWUsDaFxLA2hfSwN1dWJoDCmBlH2UKGgPfZQojBFkb21haW5fcm9s
+ZV9oaW50c5R9lCiMBHRpcG+USwGGlIwJYXZhaWxhYmxllEsAhpSMBG5vbWWUSwOGlGhsSwGGlIwJ
+ZGVzY3JpY2FvlEsDhpRobEsChpSMAnVmlEsBhpRobEsDhpSMBGRhdGGUSwSGlIwJYXR0cmlidXRl
+lEsAhpSMCW11bmljaXBpb5RLA4aUjARtZXRhlEsAhpR1Sv7///+GlGgHSwF1aCh9lChod0sEaGpL
+AWh0SwF1aCp9lChobksDaHFLA2h7SwN1dWJldS4=
+</properties>
+		<properties node_id="22" format="pickle">gASV8AIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAJ1ZpRLAYaUaBVLAoaUjARkYXRhlEsEhpSMCWF0dHJpYnV0ZZRLAIaUjAR0aXBv
+lEsBhpRoH0sBhpSMCW11bmljaXBpb5RLA4aUjARtZXRhlEsAhpR1Sv7///+GlGgHSwF1jAphdHRy
+aWJ1dGVzlH2UKIwEZGF0YZRLBIwEdGlwb5RLAYwCdWaUSwF1jAVtZXRhc5R9lCiMBG5vbWWUSwOM
+CWRlc2NyaWNhb5RLA4wJbXVuaWNpcGlvlEsDdXViaAwpgZR9lChoD32UKIwRZG9tYWluX3JvbGVf
+aGludHOUfZQojAR0aXBvlEsBhpSMCWF2YWlsYWJsZZRLAIaUjARub21llEsDhpRoOksBhpSMCWRl
+c2NyaWNhb5RLA4aUaDpLAoaUjAJ1ZpRLAYaUaDpLA4aUjARkYXRhlEsEhpSMCWF0dHJpYnV0ZZRL
+AIaUjAltdW5pY2lwaW+USwKGlGhHSwGGlHVK/v///4aUaAdLAXVoKX2UKGhFSwRoOEsBaEJLAWhJ
+SwJ1aC59lChoPEsDaD9LA3V1YmV1Lg==
+</properties>
+		<properties node_id="23" format="pickle">gASVTQQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA+4AAADR
+AAAGRwAAA0gAAAPvAAAA8AAABkYAAANHAAAAAAAAAAAKAAAAA+8AAADwAAAGRgAAA0eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMBG5vbWWUSwOGlIwJYXZhaWxhYmxllEsAhpSMCWRlc2NyaWNhb5RL
+A4aUaBVLAYaUjAltdW5pY2lwaW+USwKGlGgVSwKGlIwCdWaUSwKGlGgVSwOGlIwEZGF0YZRLBIaU
+jAlhdHRyaWJ1dGWUSwCGlIwEdGlwb5RLAYaUaCJLAYaUdUr+////hpRoB0sBdYwKYXR0cmlidXRl
+c5R9lCiMBGRhdGGUSwSMBHRpcG+USwGMAnVmlEsCjAltdW5pY2lwaW+USwJ1jAVtZXRhc5R9lCiM
+BG5vbWWUSwOMCWRlc2NyaWNhb5RLA3V1YmgMKYGUfZQoaA99lChoEX2UKIwDWC4ylEsBhpRoIksA
+hpSMA1guNJRLAYaUaCJLAYaUjANYLjWUSwGGlGgiSwKGlIwDWC4wlEsDhpSMBG1ldGGUSwCGlIwD
+WC4xlEsDhpRoQUsBhpSMA1guM5RLA4aUaEFLAoaUdUr+////hpRoB0sBdWgofZQoaDZLAWg5SwFo
+PEsBdWgufZQoaD9LA2hDSwNoRksDdXViaAwpgZR9lChoD32UKIwRZG9tYWluX3JvbGVfaGludHOU
+fZQojAR0aXBvlEsBhpSMCWF2YWlsYWJsZZRLAIaUjARub21llEsDhpRoU0sBhpSMCWRlc2NyaWNh
+b5RLA4aUaFNLAoaUjAJ1ZpRLAYaUaFNLA4aUjAltdW5pY2lwaW+USwKGlGhTSwSGlIwEZGF0YZRL
+BIaUjAlhdHRyaWJ1dGWUSwCGlHVK/v///4aUaAdLAXVoKH2UKGhhSwRoUUsBaFtLAWheSwJ1aC59
+lChoVUsDaFhLA3V1YmgMKYGUfZQoaA99lChoT32UKIwEdGlwb5RLAYaUaFNLAIaUjARub21llEsD
+hpRoU0sBhpSMCWRlc2NyaWNhb5RLA4aUaFNLAoaUjAJ1ZpRLAYaUaFNLA4aUjARkYXRhlEsEhpRo
+Y0sAhpSMCW11bmljaXBpb5RLA4aUjARtZXRhlEsAhpR1Sv7///+GlGgHSwF1aCh9lChoeEsEaGxL
+AWh1SwF1aC59lChob0sDaHJLA2h7SwN1dWJldS4=
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
