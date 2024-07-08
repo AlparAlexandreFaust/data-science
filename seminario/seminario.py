@@ -157,3 +157,13 @@ plt.show()
 
 # Exibir as primeiras linhas do dataframe atualizado para verificar a nova coluna
 df_sp.head()
+
+# Agrupar os dados de acidentes por data e contar o número de acidentes por dia
+accidents_per_day = df_sp.groupby('data_inversa').size().reset_index(name='num_acidentes')
+
+# Classificar os dias pelo número de acidentes em ordem decrescente
+ranked_accidents = accidents_per_day.sort_values(by='num_acidentes', ascending=False)
+
+# Exibir o ranking no console
+print("Ranking dos dias com mais acidentes:")
+print(ranked_accidents.head(10))  # Exibe os 10 dias com mais acidentes
