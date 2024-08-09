@@ -106,7 +106,8 @@ summary(vizinhos_queen)
 
 # Definindo uma matriz de vizinhanças com padronização em linha:
 matrizW_queen_linha <- nb2mat(vizinhos_queen,
-                              style = "W")
+                              style = "W",
+                              zero.policy = TRUE)
 
 # Observando a matriz de contiguidades, critério queen, padronizada em linha:
 colnames(matrizW_queen_linha) <- rownames(matrizW_queen_linha)
@@ -131,7 +132,7 @@ acidentes_plot <- tm_shape(shp = cidades_num_acidentes) +
   tm_layout(legend.outside = TRUE)
 
 # Autocorrelação Global – a Estatística I de Moran
-listw_queen <- mat2listw(matrizW_queen_linha)
+listw_queen <- nb2listw(vizinhos_queen, style = "W", zero.policy = TRUE)
 
 moran.test(x = cidades_num_acidentes$n, 
            listw = listw_queen)
@@ -144,7 +145,8 @@ moran.plot(x = cidades_num_acidentes$n,
 
 # Autocorrelação Local – a Estatística Moran Local
 moran_local <- localmoran(x = cidades_num_acidentes$n, 
-                          listw = listw_queen)
+                          listw = listw_queen,
+                          zero.policy = TRUE)
 
 moran_local_mapa <- cbind(cidades_num_acidentes, moran_local)
 moran_local_mapa <- moran_local_mapa %>% 
@@ -201,5 +203,33 @@ quadrantes[moran_local[,5] > sig] <- "Estatisticamente_não_significante"
 
 moran_local_mapa["quadrantes"] <- factor(quadrantes)
 
+# Versão do gráfico anterior para daltônicos:
 tm_shape(shp = moran_local_mapa) +
-  tm_polygons(col = "quadr
+  tm_polygons(col = "quadrantes", 
+              pal = c(AA = "#FDE725FF",
+                      AB = "#7AD151FF", 
+                      BA = "#2A788EFF", 
+                      BB = "#440154FF",
+                      Estatisticamente_não_significante = "white")) +
+  tm_borders() +
+  tm_layout(legend.outside = TRUE)
+
+# A que conclusões podemos chegar?
+
+# Uma análise rápida sobre o Número de mortos
+
+#avaliando mortos
+
+cidades_num_mortos <- cidades_acidentes %>% group_by(municipio.x) %>% summarise(mortos = sum(mortos))  
+cidades_num_mortos[is.na(cidades_num_mortos)] <-0
+
+cidades_num_mortos %>%
+  ggplot() +
+  geom_sf(aes(fill=mortos))
+
+tm_shape(shp=cidades_num_mortos)+
+  tm_fill(col="mortos", alpha = 0.5)+
+  tm_borders()+
+  tm_shape(shp=acidentes[acidentes$mortos >= 1,])+
+  tm_dots(size = 0.01,alpha=0.5)
+

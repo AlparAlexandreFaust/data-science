@@ -1,3 +1,5 @@
+setwd("I:/mestrado/data-science/aula/Análise espacial/script e dados/Análise espacial")
+
 pacotes <- c("tidyverse","sf","spdep","tmap","rgdal","rgeos","adehabitatHR","knitr",
              "kableExtra","gtools","grid")
 

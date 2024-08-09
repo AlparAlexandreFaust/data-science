@@ -1,4 +1,3 @@
-data,nome,tipo,descricao,uf,municipio
 01/01/2023,"Ano Novo",NACIONAL,"O Ano-Novo ou Réveillon é um evento que acontece quando uma cultura celebra o fim de um ano e o começo do próximo. A celebração do evento é também chamada Réveillon, termo oriundo do verbo francês réveiller, que em português significa DESPERTAR",, 
 07/04/2023,"Sexta-Feira Santa",NACIONAL,"Também chamada de ""Sexta Feira da Paixão"" é a sexta-feira que ocorre antes do domingo de Páscoa, e é o dia que os cristãos lembram da crucificação de Cristo.",, 
 21/04/2023,"Dia de Tiradentes",NACIONAL,"Joaquim José da Silva Xavier, o Tiradentes foi um dentista, tropeiro, minerador, comerciante, militar e ativista político. É reconhecido como mártir da Inconfidência Mineira e herói nacional. O dia de sua execução, 21 de abril, é feriado nacional.",, 

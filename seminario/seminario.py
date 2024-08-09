@@ -14,19 +14,22 @@ def load_tables_with_headers(file_paths, delimiter, encoding, headers):
 
 # Lista de arquivos de feriados
 holiday_files = [
-    'src/feriados/municipal/csv/2023.csv',
-    'src/feriados/estadual/csv/2023.csv',
-    'src/feriados/nacional/csv/2023.csv',
-    'src/feriados/municipal/csv/2024.csv',
-    'src/feriados/estadual/csv/2024.csv',
-    'src/feriados/nacional/csv/2024.csv'
+    # Adicione os caminhos dos arquivos de feriados aqui
 ]
 
 # Lista de arquivos de acidentes
 accident_files = [
-    'src/datatran2023.csv',
-    'src/datatran2024.csv'
+    # Adicione os caminhos dos arquivos de acidentes aqui
 ]
+
+# Definir os anos dos arquivos de feriados e acidentes
+years = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+
+for year in years:
+    holiday_files.append(f'src/feriados/municipal/csv/{year}.csv')
+    holiday_files.append(f'src/feriados/estadual/csv/{year}.csv')
+    holiday_files.append(f'src/feriados/nacional/csv/{year}.csv')
+    accident_files.append(f'src/datatran{year}.csv')
 
 # Cabeçalhos para os arquivos de feriados
 holiday_headers = ['data', 'nome', 'tipo', 'descricao', 'uf', 'municipio']
@@ -48,8 +51,19 @@ def load_tables(file_paths, delimiter, encoding):
         tables = pd.concat([tables, df], ignore_index=True)
     return tables
 
-# Carregar o arquivo CSV de acidentes
-df = load_tables(accident_files, ";", "latin1")
+# Carregar o arquivo CSV de acidentes (diferentes formatos)
+def load_accidents(accident_files):
+    tables = pd.DataFrame()
+    for file_path in accident_files:
+        if int(file_path[-8:-4]) <= 2011:
+            df = pd.read_csv(file_path, delimiter=';', encoding='latin1')
+        else:
+            df = pd.read_csv(file_path, delimiter=';', encoding='latin1', quotechar='"')
+        tables = pd.concat([tables, df], ignore_index=True)
+    return tables
+
+# Carregar os dados de acidentes
+df = load_accidents(accident_files)
 
 # Preencher valores ausentes
 df['br'].fillna(0, inplace=True)
@@ -63,7 +77,7 @@ df_sp = df[df['uf'] == 'SP']
 df_sp['feriado'] = 'false'
 
 # Converter colunas de data para datetime
-df_sp['data_inversa'] = pd.to_datetime(df_sp['data_inversa'], format='%Y-%m-%d')
+df_sp['data_inversa'] = pd.to_datetime(df_sp['data_inversa'], errors='coerce')
 
 # Verificar feriados e atualizar a coluna de feriado
 for idx, row in df_sp.iterrows():
