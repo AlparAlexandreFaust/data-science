@@ -12,6 +12,8 @@ def load_tables_with_headers(file_paths, delimiter, encoding, headers):
         tables = pd.concat([tables, df], ignore_index=True)
     return tables
 
+classificar_feriados = False
+
 # Lista de arquivos de feriados
 holiday_files = [
     # Adicione os caminhos dos arquivos de feriados aqui
@@ -72,24 +74,25 @@ df.fillna('Não Informado', inplace=True)
 # Filtrar os dados para apenas acidentes em São Paulo (SP)
 df_sp = df[df['uf'] == 'SP']
 
-# Adicionar coluna de feriado
-df_sp['feriado'] = 'false'
+if classificar_feriados:
+    # Adicionar coluna de feriado
+    df_sp['feriado'] = 'false'
 
-# Verificar feriados e atualizar a coluna de feriado
-for idx, row in df_sp.iterrows():
-    accident_date = row['data_inversa']
-    accident_city = row['municipio']
-    
-    # Verificar feriados nacionais e estaduais
-    if not holidays[(holidays['data'] == accident_date) & 
-                    (holidays['tipo'].isin(['NACIONAL', 'ESTADUAL']))].empty:
-        df_sp.at[idx, 'feriado'] = 'true'
-    
-    # Verificar feriados municipais
-    if not holidays[(holidays['data'] == accident_date) & 
-                    (holidays['tipo'] == 'MUNICIPAL') & 
-                    (holidays['municipio'] == accident_city)].empty:
-        df_sp.at[idx, 'feriado'] = 'true'
+    # Verificar feriados e atualizar a coluna de feriado
+    for idx, row in df_sp.iterrows():
+        accident_date = row['data_inversa']
+        accident_city = row['municipio']
+        
+        # Verificar feriados nacionais e estaduais
+        if not holidays[(holidays['data'] == accident_date) & 
+                        (holidays['tipo'].isin(['NACIONAL', 'ESTADUAL']))].empty:
+            df_sp.at[idx, 'feriado'] = 'true'
+        
+        # Verificar feriados municipais
+        if not holidays[(holidays['data'] == accident_date) & 
+                        (holidays['tipo'] == 'MUNICIPAL') & 
+                        (holidays['municipio'] == accident_city)].empty:
+            df_sp.at[idx, 'feriado'] = 'true'
 
 # Garantir que o diretório de saída exista
 output_dir = 'output'
