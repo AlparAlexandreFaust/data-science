@@ -14,17 +14,6 @@ accidents_per_month = df_sp.groupby('ano_mes').size().reset_index(name='num_acid
 # Converter 'ano_mes' de Period para datetime para plotagem
 accidents_per_month['ano_mes'] = accidents_per_month['ano_mes'].dt.to_timestamp()
 
-# Configurações gerais para os gráficos
-plt.figure(figsize=(14, 7))
-plt.plot(accidents_per_month['ano_mes'], accidents_per_month['num_acidentes'], marker='o', linestyle='-')
-plt.title('Quantidade de Acidentes por Mês')
-plt.xlabel('Mês')
-plt.ylabel('Número de Acidentes')
-plt.grid(True)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
-
 
 ####################################################################################################
 
@@ -72,42 +61,8 @@ plt.title('Número de Acidentes com Vítimas Fatais por Município')
 plt.xlabel('Município')
 plt.ylabel('Número de Acidentes Fatais')
 
-# Gráfico de barras para média de acidentes por dia
-plt.subplot(2, 2, 4)
-daily_accidents = df_sp.groupby(['data_inversa', 'feriado']).size().reset_index(name='num_acidentes')
-daily_avg = daily_accidents.groupby('feriado')['num_acidentes'].mean().reset_index()
-
-colors = ['red' if feriado == 'true' else 'blue' for feriado in daily_avg['feriado']]
-
-plt.bar(daily_avg['feriado'], daily_avg['num_acidentes'], color=colors)
-plt.title('Média de Acidentes por Dia')
-plt.xlabel('Feriado')
-plt.ylabel('Média de Acidentes')
-plt.xticks(ticks=[0, 1], labels=['Não Feriado', 'Feriado'])
-
-plt.tight_layout()
-plt.show()
-
 # Gráfico de barras dos últimos 365 dias
 plt.figure(figsize=(18, 6))
-
-# Filtrar os dados dos últimos 365 dias
-end_date = df_sp['data_inversa'].max()
-start_date = end_date - timedelta(days=365)
-last_year_data = df_sp[(df_sp['data_inversa'] >= start_date) & (df_sp['data_inversa'] <= end_date)]
-
-# Contar número de acidentes por dia
-daily_accidents_last_year = last_year_data.groupby(['data_inversa', 'feriado']).size().reset_index(name='num_acidentes')
-
-# Plotar o gráfico
-colors = ['red' if feriado == 'true' else 'blue' for feriado in daily_accidents_last_year['feriado']]
-plt.bar(daily_accidents_last_year['data_inversa'], daily_accidents_last_year['num_acidentes'], color=colors)
-plt.title('Número de Acidentes nos Últimos 365 Dias')
-plt.xlabel('Data')
-plt.ylabel('Número de Acidentes')
-
-plt.tight_layout()
-plt.show()
 
 # Exibir as primeiras linhas do dataframe atualizado para verificar a nova coluna
 df_sp.head()
