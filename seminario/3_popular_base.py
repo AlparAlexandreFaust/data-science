@@ -19,7 +19,7 @@ def gerar_linhas(df, km_adjustments, target_value):
 df_acidentes = gerar_linhas(df, km_adjustments=[0, 1, 2, -1, -2], target_value=1)
 
 # Linhas para não acidentes (target = 0)
-df_nao_acidentes = gerar_linhas(df, km_adjustments=[-3, -4, -5, -6, 3, 4], target_value=0)
+df_nao_acidentes = gerar_linhas(df, km_adjustments=[-3, -4, -5, 3, 4], target_value=0)
 
 # Concatenar os dataframes gerados
 df_final = pd.concat([df_acidentes, df_nao_acidentes], ignore_index=True)
