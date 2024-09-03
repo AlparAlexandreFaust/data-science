@@ -63,6 +63,10 @@ def padronizar_condicao_meteorologica(condicao):
 
     return condicao
 
+# Função para verificar se é final de semana
+def verificar_final_de_semana(dia):
+    return dia in ['sabado', 'domingo']
+
 # Carregar o arquivo CSV, sem definir 'dtype' inicialmente para evitar erros
 file_path = 'output/datatran-sp.csv'
 data = pd.read_csv(file_path, delimiter=';', encoding='ISO-8859-1', low_memory=False)
@@ -85,6 +89,9 @@ data['condicao_metereologica'] = data['condicao_metereologica'].apply(padronizar
 
 # 4. Coluna `br`: Filtrar apenas a rodovia BR-116
 data = data[data['br'] == 116]
+
+# 5. Adicionar a nova coluna 'final_de_semana' ao DataFrame
+data['final_de_semana'] = data['dia_semana'].apply(verificar_final_de_semana)
 
 # Salvar o arquivo processado com codificação UTF-8
 output_file_path = 'output/preprocessado.csv'

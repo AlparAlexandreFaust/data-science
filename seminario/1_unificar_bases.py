@@ -12,7 +12,7 @@ def load_tables_with_headers(file_paths, delimiter, encoding, headers):
         tables = pd.concat([tables, df], ignore_index=True)
     return tables
 
-classificar_feriados = False
+classificar_feriados = True
 
 # Lista de arquivos de feriados
 holiday_files = [
@@ -25,7 +25,7 @@ accident_files = [
 ]
 
 # Definir os anos dos arquivos de feriados e acidentes
-years = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+years = ['2020', '2021', '2022', '2023', '2024']
 
 for year in years:
     holiday_files.append(f'src/feriados/municipal/csv/{year}.csv')
